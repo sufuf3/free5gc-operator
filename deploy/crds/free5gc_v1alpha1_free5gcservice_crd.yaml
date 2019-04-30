@@ -9,6 +9,9 @@ spec:
     listKind: Free5gcServiceList
     plural: free5gcservices
     singular: free5gcservice
+    shortNames:
+    - fs
+    - f5gcsvc
   scope: Namespaced
   subresources:
     status: {}
