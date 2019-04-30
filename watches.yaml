@@ -1,0 +1,5 @@
+---
+- version: v1alpha1
+  group: free5gc.com
+  kind: Free5gcService
+  chart: /opt/helm/helm-charts/free5gcservice

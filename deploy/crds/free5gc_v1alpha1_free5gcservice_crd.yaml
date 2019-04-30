@@ -1,0 +1,19 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: free5gcservices.free5gc.com
+spec:
+  group: free5gc.com
+  names:
+    kind: Free5gcService
+    listKind: Free5gcServiceList
+    plural: free5gcservices
+    singular: free5gcservice
+  scope: Namespaced
+  subresources:
+    status: {}
+  version: v1alpha1
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
