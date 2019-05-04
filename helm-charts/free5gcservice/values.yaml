@@ -34,49 +34,28 @@ webui:
     nodePort: true
     nodePortNum: 31727
 
-
-replicaCount: 1
-
-image:
-  repository: nginx
-  tag: stable
-  pullPolicy: IfNotPresent
-
-nameOverride: ""
-fullnameOverride: ""
-
-service:
-  type: ClusterIP
-  port: 80
-
-ingress:
-  enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  hosts:
-    - host: chart-example.local
-      paths: []
-
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
-
-resources: {}
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
+free5gc:
+  image:
+    repository: sufuf3/nextepc-build
+    tag: latest
+    pullPolicy: IfNotPresent
+  amf:
+    enabled: true
+    addr: 10.233.100.202
+    s1ap: 192.188.2.100
+    mcc: 208
+    mnc: 93
+  hss:
+    enabled: true
+    addr: 10.233.100.203
+  smf:
+    enabled: true
+    addr: 10.233.100.204
+    nodePort: 31780
+  pcrf:
+    enabled: true
+    addr: 10.233.100.205
+  upf:
+    enabled: true
+    addr: 10.233.100.206
+    gtpu: 192.188.2.101

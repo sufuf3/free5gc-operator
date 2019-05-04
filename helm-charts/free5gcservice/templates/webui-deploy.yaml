@@ -19,12 +19,12 @@ spec:
     spec:
       containers:
         - name: nextepc-webui
-          image: "{{ .Values.webui.image.repository }}:{{ .Values.webui.image.tag }}"
+          image: "{{ .Values.webui.controller.image.repository }}:{{ .Values.webui.controller.image.tag }}"
           command:
             - npm
             - run
             - dev
-          imagePullPolicy: {{ .Values.webui.image.pullPolicy }}
+          imagePullPolicy: {{ .Values.webui.controller.image.pullPolicy }}
           ports:
             - name: http
               containerPort: 3000
