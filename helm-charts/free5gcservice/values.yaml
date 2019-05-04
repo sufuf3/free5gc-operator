@@ -4,7 +4,7 @@
 
 namespace: cn1
 mongodb:
-  enabled: false
+  enabled: true
   controller:
     replicaCount: 1
     cpu: 200m
@@ -22,6 +22,17 @@ mongodb:
     nodePort: true
     nodePortNum: 31717
 
+webui:
+  enabled: true
+  controller:
+    replicaCount: 1
+    image:
+      repository: sufuf3/nextepc-webui
+      tag: latest
+      pullPolicy: IfNotPresent
+  service:
+    nodePort: true
+    nodePortNum: 31727
 
 
 replicaCount: 1
