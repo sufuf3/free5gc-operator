@@ -90,7 +90,7 @@ data:
     #
         gummei: 
           plmn_id:
-            mcc: {{ .Values.free5gc.amf.mmc }}
+            mcc: {{ .Values.free5gc.amf.mcc }}
             mnc: {{ .Values.free5gc.amf.mnc }}
           mme_gid: 1
           mme_code: 1
@@ -128,7 +128,7 @@ data:
     #
         tai:
           plmn_id:
-            mcc: {{ .Values.free5gc.amf.mmc }}
+            mcc: {{ .Values.free5gc.amf.mcc }}
             mnc: {{ .Values.free5gc.amf.mnc }}
           tac: 1
         security:

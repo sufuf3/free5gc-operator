@@ -41,7 +41,7 @@ spec:
       - name: upf-container
         image: "{{ .Values.free5gc.image.repository }}:{{ .Values.free5gc.image.tag }}"
         command: ["/bin/bash"]
-        args: ["-c", "ip addr add  {{ .Values.free5gc.upf.gtpu }}/24 dev net1 && /root/setup.sh && /usr/src/free5gc/free5gc-upfd"]
+        args: ["-c", "ip addr add {{ .Values.free5gc.upf.gtpu }}/24 dev net1 && /root/setup.sh && /usr/src/free5gc/free5gc-upfd"]
         stdin: true
         tty: true
         imagePullPolicy: {{ .Values.free5gc.image.pullPolicy }}
