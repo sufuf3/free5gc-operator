@@ -8,6 +8,7 @@ spec:
   # Default values for free5gcservice.
   # This is a YAML-formatted file.
   # Declare variables to be passed into your templates.
+  createNamespace: false
   namespace: cn1
   mongodb:
     enabled: true
